@@ -1,6 +1,8 @@
-
 import "./App.css";
-import Item from "./components/item";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import Products from "./Pages/Products";
+import Card from "./components2/Card";
 
 let tea = [
   { name: "Ginger peach tea", price: 399, reviews: 21, ratings: 5 },
@@ -17,15 +19,7 @@ let tea = [
 function App() {
   return (
     <>
-      <Item tea={tea[0]} id={1}/>
-      <Item tea={tea[1]} id={2}/>
-      <Item tea={tea[2]} id={3}/>
-      <Item tea={tea[3]} id={4}/>
-      <Item tea={tea[4]} id={5}/>
-      <Item tea={tea[5]} id={6}/>
-      <Item tea={tea[6]} id={7}/>
-      <Item tea={tea[7]} id={8}/>
-      <Item tea={tea[8]} id={9}/>
+      <Home />
     </>
   );
 }
