@@ -1,66 +1,27 @@
 import Product from "./prod";
-let tea = [
-  {
-    name: "Ginger peach tea",
-    price: 399,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-  { name: "Fruit sangria", price: 349, reviews: 21, ratings: 4, quantity: 0 },
-  { name: "Clear tea", price: 499, reviews: 21, ratings: 5, quantity: 0 },
-  {
-    name: "Moonlight Serenade Oolong",
-    price: 449,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-  {
-    name: "Dragon's Breath",
-    price: 449,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-  {
-    name: "Sunset Blossom Rooibos",
-    price: 449,
-    reviews: 21,
-    ratings: 2,
-    quantity: 0,
-  },
-  {
-    name: "Verdant Orchard Elixir",
-    price: 449,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-  {
-    name: "Lemon Frost Oasis",
-    price: 449,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-  {
-    name: "dooars terai",
-    price: 449,
-    reviews: 21,
-    ratings: 5,
-    quantity: 0,
-  },
-];
-export default function Card(props) {
+import tea from "../data/tea.js";
+import Cart from "./cart.js";
+import Navbar from "./navbar.js";
+import Footer from "./footer.js";
+export default function Card() {
   return (
     <>
+      <Cart />
+      <Navbar />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
       <section class="products">
         <div class="section-center clearfix">
           <article
             class="products-inventory-all clearfix"
             id="products-inventory-all"
           >
+            <h2 style={{ padding: "15px" }}>inventory</h2> <br />
             <Product tea={tea[0]} id={1} />
             <Product tea={tea[1]} id={2} />
             <Product tea={tea[2]} id={3} />
@@ -73,6 +34,7 @@ export default function Card(props) {
           </article>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

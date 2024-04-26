@@ -12,7 +12,7 @@ function OurServices() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/product-1.jpeg"
+                src={require("../images/product-1.jpeg")}
                 alt="service-img 1"
                 class="service-img"
               />
@@ -36,7 +36,7 @@ function OurServices() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/product-2.jpeg"
+                src={require("../images/product-2.jpeg")}
                 alt="service-img 2"
                 class="service-img"
               />
@@ -60,7 +60,7 @@ function OurServices() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/product-3.jpeg"
+                src={require("../images/product-3.jpeg")}
                 alt="service-img 3"
                 class="service-img"
               />

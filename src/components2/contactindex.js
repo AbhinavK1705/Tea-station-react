@@ -1,4 +1,13 @@
 function ContactForm() {
+  const contactName = document.getElementById("contact-name");
+  const contactEmail = document.getElementById("contact-email");
+  const contactMessage = document.getElementById("contact-message");
+  const submitForm = function () {
+    contactName.value = "";
+    contactEmail.value = "";
+    contactMessage.value = "";
+    alert("Thank you for submitting :)");
+  };
   return (
     <>
       <section class="contact">
@@ -61,11 +70,7 @@ function ContactForm() {
                   id="contact-message"
                 ></textarea>
               </div>
-              <button
-                type="button"
-                class="submit-btn btn"
-                onclick="submitForm()"
-              >
+              <button type="button" class="submit-btn btn" onClick={submitForm}>
                 submit here
               </button>
             </form>

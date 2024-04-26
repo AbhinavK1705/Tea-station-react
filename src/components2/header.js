@@ -1,5 +1,6 @@
 import "../Styles/header.css";
 import "../Styles/styles.css";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
@@ -10,9 +11,10 @@ function Header() {
             specially <br />
             crafted tea
           </h1>
-          <a class="btn banner-btn" href="/about.html">
+
+          <Link to="/about" className="btn banner-btn">
             explore
-          </a>
+          </Link>
         </div>
       </header>
       <div class="content-divider"></div>

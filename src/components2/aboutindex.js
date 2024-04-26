@@ -6,7 +6,7 @@ function AboutIndex() {
           <article class="about-img">
             <div class="about-picture-container">
               <img
-                src={"./images/about-bcg.jpeg"}
+                src={require("../images/about-bcg.jpeg")}
                 alt="tea kettle"
                 class="about-picture"
               />

@@ -1,25 +1,24 @@
 import "./App.css";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
-import Card from "./components2/Card";
 
-let tea = [
-  { name: "Ginger peach tea", price: 399, reviews: 21, ratings: 5 },
-  { name: "Fruit sangria", price: 349, reviews: 21, ratings: 5 },
-  { name: "Clear tea", price: 499, reviews: 21, ratings: 5 },
-  { name: "Moonlight Serenade Oolong", price: 449, reviews: 21, ratings: 5 },
-  { name: "Dragon's Breath Pu-erh", price: 449, reviews: 21, ratings: 5 },
-  { name: "Sunset Blossom Rooibos", price: 449, reviews: 21, ratings: 5 },
-  { name: "Verdant Orchard Elixir", price: 449, reviews: 21, ratings: 5 },
-  { name: "Lemon Frost Oasis", price: 449, reviews: 21, ratings: 5 },
-  { name: "Ginger peach tea", price: 449, reviews: 21, ratings: 5 },
-];
+import Card from "./components2/Card";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components2/navbar";
 
 function App() {
   return (
     <>
-      <Home />
+      <Router>
+        <Navbar /> {/* Your navbar component */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Card />} />
+          {/* Add more routes here for other pages */}
+        </Routes>
+      </Router>
     </>
   );
 }

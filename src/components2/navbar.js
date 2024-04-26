@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   const [showNav, setShowNav] = useState(false); // Initial state: navbar hidden
 
@@ -8,33 +8,34 @@ function Navbar() {
   };
   return (
     <>
-      <span class="nav-btn" id="nav-btn" onClick={navbarHandler}>
-        <i class="fas fa-bars"></i>
+      <span className="nav-btn" id="nav-btn" onClick={navbarHandler}>
+        <i className="fas fa-bars"></i>
       </span>
       <nav id="navbar" className={`navbar ${showNav ? "showNav" : ""}`}>
-        <div class="navbar-header">
+        <div className="navbar-header">
           <span
             className={`nav-close ${showNav ? "showNav" : ""}`}
             id="nav-close"
+            onClick={navbarHandler}
           >
-            <i class="fas fa-times" onClick={navbarHandler}></i>
+            <i className="fas fa-times"></i>
           </span>
         </div>
-        <ul class="nav-items">
+        <ul className="nav-items">
           <li>
-            <a class="nav-link" href="/">
+            <Link to="/" className="nav-link">
               home
-            </a>
+            </Link>
           </li>
           <li>
-            <a class="nav-link" href="/about">
+            <Link to="/about" className="nav-link">
               about
-            </a>
+            </Link>
           </li>
           <li>
-            <a class="nav-link" href="/products">
+            <Link to="/products" className="nav-link">
               products
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
