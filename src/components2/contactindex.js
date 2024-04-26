@@ -1,12 +1,26 @@
+import { useState, useEffect } from "react";
+
 function ContactForm() {
-  const contactName = document.getElementById("contact-name");
-  const contactEmail = document.getElementById("contact-email");
-  const contactMessage = document.getElementById("contact-message");
+  const [contactName, setContactName] = useState(null);
+  const [contactEmail, setContactEmail] = useState(null);
+  const [contactMessage, setContactMessage] = useState(null);
+
+  useEffect(() => {
+    setContactName(document.getElementById("contact-name"));
+    setContactEmail(document.getElementById("contact-email"));
+    setContactMessage(document.getElementById("contact-message"));
+  }, []); // Run effect only once on component mount
+
   const submitForm = function () {
-    contactName.value = "";
-    contactEmail.value = "";
-    contactMessage.value = "";
-    alert("Thank you for submitting :)");
+    if (contactName && contactEmail && contactMessage) {
+      // Check if elements exist
+      contactName.value = "";
+      contactEmail.value = "";
+      contactMessage.value = "";
+      alert("Thank you for submitting :)");
+    } else {
+      console.error("Elements not yet available");
+    }
   };
   return (
     <>
