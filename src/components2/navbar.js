@@ -6,6 +6,7 @@ function Navbar() {
   const navbarHandler = () => {
     setShowNav(!showNav); // Toggle navbar visibility on click
   };
+  
   return (
     <>
       <span className="nav-btn" id="nav-btn" onClick={navbarHandler}>

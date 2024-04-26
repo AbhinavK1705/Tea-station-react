@@ -22,7 +22,7 @@ function Bestsellers() {
       itemsInCart.forEach((prod, i) => {
         const html = `<div class="cart-item">
           <div class="cart-item-image-container">
-            <img src={require("./images/product-${i + 1}.jpg")} alt="${
+            <img src=${require(`../images/product-${i + 1}.jpg`)} alt="${
           prod.name
         }" />
           </div>

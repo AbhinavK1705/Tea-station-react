@@ -7,8 +7,10 @@ import Navbar from "../components2/navbar";
 import Bestsellers from "../components2/productsindex";
 import OurServices from "../components2/servicesindex";
 import SkillParent from "../components2/skillparent";
+import tea from "../data/tea";
 
 function Home() {
+  
   return (
     <>
       <link

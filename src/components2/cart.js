@@ -20,11 +20,12 @@ function Cart() {
   // Updates the total quantity of items displayed in the cart icon
   const updateCartQuantity = () => {
     const cartQuantity = document.getElementById("cart-quantity");
-    cartQuantity.textContent = tea.reduce(
+    cartQuantity.innerHTML = tea.reduce(
       (acc, prod) => acc + prod.quantity,
       0
     );
   };
+  // updateCartQuantity();
 
   // Renders all cart items based on their current quantities
   const showAllCartItems = () => {
@@ -40,7 +41,7 @@ function Cart() {
       itemsInCart.forEach((prod, i) => {
         const html = `<div class="cart-item">
           <div class="cart-item-image-container">
-            <img src=require("../images/product-${i + 1}.jpg") alt="${
+            <img src=${require(`../images/product-${i + 1}.jpg`)} alt="${
           prod.name
         }" />
           </div>

@@ -59,7 +59,7 @@ export default function Product(props) {
               <div class="add-quantity" onclick="document.dispatchEvent(new CustomEvent('changeQuantity', { detail: { index: ${i}, increment: true } }))">
                 <i class="fas fa-plus"></i>
               </div>
-            </div>
+            </div> 
             <div class="item-price"><p>Rs. ${
               prod.price * prod.quantity
             }</p></div>
@@ -106,3 +106,4 @@ export default function Product(props) {
     </div>
   );
 }
+

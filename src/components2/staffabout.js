@@ -11,7 +11,7 @@ function Staffabout() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/reddy.jpg"
+                src={require("../images/reddy.jpg")}
                 alt="service-img 1"
                 class="service-img"
               />
@@ -34,7 +34,7 @@ function Staffabout() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/self.jpg"
+                src={require("../images/self.jpg")}
                 alt="service-img 2"
                 class="service-img"
               />
@@ -57,7 +57,7 @@ function Staffabout() {
             <div class="service-img-container">
               {/* <!-- image --> */}
               <img
-                src="./images/poojitha.jpg"
+                src={require("../images/poojitha.jpg")}
                 alt="service-img 3"
                 class="service-img"
               />
